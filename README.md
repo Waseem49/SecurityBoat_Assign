@@ -1,4 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
  <div align="center">
    <h1>Frontend Deployed Link :<a href="https://security-boat-assign.vercel.app/" target="_blank">Visit</a></h1>
  </div>
@@ -16,6 +15,24 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
   <p>Edit & Delete : /api/product/:id</p>
   <p>Product list Get API: https://security-boat-assign.vercel.app/api/user/auth</p>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
 ## Getting Started
