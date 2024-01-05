@@ -7,7 +7,7 @@ const Cart = () => {
   const { cart } = useContext(MyContext);
   let price =
     cart?.reduce((acc, el) => {
-      acc += el.price;
+      acc += +el.price;
       return acc;
     }, 0) || 0;
 

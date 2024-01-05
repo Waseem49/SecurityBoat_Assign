@@ -1,20 +1,23 @@
 "use client";
 import Image from "next/image";
-import React from "react";
-async function getdata() {
-  try {
-    const response = await fetch("http://localhost:3000/api/user/auth", {
-      cache: "no-cache",
-    });
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.log(error);
-  }
-}
-const Admin = async () => {
-  let { data } = await getdata();
+import React, { useEffect, useState } from "react";
 
+const Admin = async () => {
+  const [data, setdata] = useState([]);
+  async function getdata() {
+    try {
+      const response = await fetch("http://localhost:3000/api/user/auth", {
+        cache: "no-cache",
+      });
+      const data = await response.json();
+      setdata(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  useEffect(() => {
+    getdata();
+  }, []);
   const handleSubmit = async (e) => {
     e.preventDefault();
     const title = e.target[0].value;
@@ -36,6 +39,7 @@ const Admin = async () => {
         body: JSON.stringify(productobject),
       });
       const result = await response.json();
+      getdata();
       console.log(result);
     } catch (error) {
       console.log(error);
@@ -47,7 +51,7 @@ const Admin = async () => {
         method: "DELETE",
       });
       const data = await response.json();
-      return data;
+      getdata();
     } catch (error) {
       console.log(error);
     }
