@@ -27,7 +27,6 @@ const Admin = async () => {
       price: price,
       rating: rating,
     };
-    console.log(productobject);
     try {
       const response = await fetch("http://localhost:3000/api/product", {
         method: "POST",
@@ -48,7 +47,6 @@ const Admin = async () => {
         method: "DELETE",
       });
       const data = await response.json();
-      console.log(data);
       return data;
     } catch (error) {
       console.log(error);
