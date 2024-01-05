@@ -22,7 +22,8 @@ body {
   font-size: 18px;
 }
 .cartlog {
-  width: 10%;
+  border: 1px solid red;
+  min-width: 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -48,4 +49,64 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
+  position: relative;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border: 1px solid #e1e1e1;
+  height: 23rem;
+  width: 22rem;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.product:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.product > div {
+  margin-left: 20px;
+  flex-grow: 1;
+}
+
+.product h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.product button:hover {
+  background-color: #0056b3;
+}
+
+.product h3 {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.product h3 span {
+  margin-right: 15px;
+}
+
+.product p {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 0;
 }
