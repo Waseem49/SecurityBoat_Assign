@@ -8,7 +8,6 @@ const Login = () => {
   const router = useRouter();
   const { settoken } = useContext(MyContext);
   const [formData, setFormData] = useState({
-    name: "",
     role: "customer",
     email: "",
     password: "",
@@ -55,27 +54,6 @@ const Login = () => {
     <div className="login-form">
       <form onSubmit={handleSubmit}>
         <label>
-          Name:
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <br />
-
-        <label>
-          Role:
-          <select name="role" value={formData.role} onChange={handleChange}>
-            <option value="customer">Customer</option>
-            <option value="admin">Admin</option>
-          </select>
-        </label>
-        <br />
-
-        <label>
           Email:
           <input
             type="email"
@@ -96,6 +74,14 @@ const Login = () => {
             onChange={handleChange}
             required
           />
+        </label>
+        <br />
+        <label>
+          Role:
+          <select name="role" value={formData.role} onChange={handleChange}>
+            <option value="customer">Customer</option>
+            <option value="admin">Admin</option>
+          </select>
         </label>
         <br />
         <div

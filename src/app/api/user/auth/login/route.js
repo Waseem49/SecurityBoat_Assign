@@ -2,7 +2,6 @@ import connectDB from "@/config/connectDB";
 import { customermodel } from "@/models/customerModel";
 import { compare } from "bcryptjs";
 import { SignJWT } from "jose";
-import { sign } from "jsonwebtoken";
 import { NextResponse } from "next/server";
 
 export const POST = async (req) => {

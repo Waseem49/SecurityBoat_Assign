@@ -121,6 +121,8 @@ main {
   min-height: calc(100vh - 5.5rem);
   width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .login-form {
@@ -213,6 +215,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .addform {
