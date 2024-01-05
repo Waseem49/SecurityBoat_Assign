@@ -5,7 +5,7 @@ export const POST = async (req) => {
   await connectDB();
   try {
     let response = NextResponse.json(
-      { msg: "Logout successfull", token },
+      { msg: "Logout successfull"},
       { status: 200 }
     );
     response.cookies.set("securitytoken", null);

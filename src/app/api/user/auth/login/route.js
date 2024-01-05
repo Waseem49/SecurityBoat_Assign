@@ -37,7 +37,7 @@ export const POST = async (req) => {
         .sign(new TextEncoder().encode("secretKey"));
 
       let response = NextResponse.json(
-        { msg: "Login successfull", token },
+        { msg: "Login successfull", token, role: reqbody.role },
         { status: 200 }
       );
       response.cookies.set("securitytoken", token, { expiresIn: "7D" });
