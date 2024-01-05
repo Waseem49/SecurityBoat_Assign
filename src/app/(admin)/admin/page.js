@@ -4,12 +4,14 @@ import React, { useEffect, useState } from "react";
 
 const Admin = () => {
   const [data, setdata] = useState([]);
-  console.log(data);
   const getdata = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/user/auth", {
-        cache: "no-cache",
-      });
+      const response = await fetch(
+        "https://security-boat-assign.vercel.app/api/user/auth",
+        {
+          cache: "no-cache",
+        }
+      );
       const data = await response.json();
       setdata(data.data);
     } catch (error) {
@@ -37,13 +39,16 @@ const Admin = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:3000/api/product", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(productobject),
-      });
+      const response = await fetch(
+        "https://security-boat-assign.vercel.app/api/product",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(productobject),
+        }
+      );
       const result = await response.json();
       getdata();
       console.log(result);
@@ -55,9 +60,12 @@ const Admin = () => {
 
   const HandleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/product/${id}`, {
-        method: "DELETE",
-      });
+      const response = await fetch(
+        `https://security-boat-assign.vercel.app/api/product/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
     } catch (error) {
       console.log(error);
     }
