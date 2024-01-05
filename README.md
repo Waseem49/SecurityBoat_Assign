@@ -1,5 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+ <div align="center">
+   <h1>Frontend Deployed Link :<a href="https://security-boat-assign.vercel.app/" target="_blank">Visit</a></h1>
+ </div>
 
+
+<div>
+  <h1>Api</h1>
+  <h3>Auth Api</h3>
+  <p>Customer & Admin Register : /api/user/auth/register</p>
+  <p>Customer & Admin Login : /api/user/auth/login</p>
+  <p>Customer & Admin Logout : /api/user/auth/logout</p>
+  <h3>Admin control Api</h3>
+  <h4>Only Admin can add, edit, delete product </h4>
+  <p>Add Product: /api/product</p>
+  <p>Edit & Delete : /api/product/:id</p>
+  <p>Product list Get API: https://security-boat-assign.vercel.app/api/user/auth</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 ## Getting Started
 
 First, run the development server:
